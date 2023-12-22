@@ -1,0 +1,73 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "FastAPI",
+        "version": "0.1.0"
+    },
+    "servers": [
+        {
+            "url": "https://au-syd.functions.appdomain.cloud",
+            "description": "Sydney, AU"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Index",
+                "operationId": "index__get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/hello": {
+            "get": {
+                "summary": "Index",
+                "operationId": "index_hello_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/answers": {
+            "get": {
+                "summary": "Getanswer",
+                "operationId": "getAnswer_answers_get",
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Question"
+                        },
+                        "name": "question",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }                  }
+                }
+            }
+        }
+    }

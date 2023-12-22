@@ -1,0 +1,26 @@
+openapi: '3.0.2'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: https://watsonx-api.onrender.com
+paths:
+  /:
+    get:
+      responses:
+        '200':
+          description: OK
+  /hello:
+    get:
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /answers:
+    post:
+      description: 'Get the question from the user'
+      parameters: ["question"]
+      responses:
+        '200':
+          description: OK

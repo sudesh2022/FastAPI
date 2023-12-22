@@ -10,8 +10,11 @@ def index():
 
 @app.get('/hello')
 def index():
-    return {"message": "Hello Sudesh!"}
+    return {"message": "Hello Testing the routes !"}
 
 
+@app.get("/answers")
+async def getAnswer(question: str):
+    return {"question": "Hello  " +   question}
 
 
